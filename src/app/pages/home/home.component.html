@@ -1,0 +1,21 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5 py-3">
+    <a class="navbar-brand" routerLink="/">angular task</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/dashboard/add-category">Dashboard</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+    <h2 class="mb-3">Categories:</h2>
+    <div class="list-group">
+      <a *ngFor="let category of categories" [routerLink]="['/category', category]" class="list-group-item list-group-item-action">{{ category }}</a>
+    </div>
+  </div>
+  
